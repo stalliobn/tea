@@ -1,0 +1,82 @@
+@import 'variables', 'mixins', 'normalize';
+@import 'parts/bootstrap', 'parts/product', 'parts/header', 'parts/modal', 'parts/block-product',
+'parts/footer';
+html {
+  &:before {
+    content: "#{inspect($breakpoints)}";
+    display: none;
+  }
+}
+.clearfix {
+  @each $pseudo in after before {
+    &:#{$pseudo} {
+      content: '';
+      display: table;
+    }
+  }
+  &:after {
+    clear: both;
+  }
+}
+a,
+a:visited,
+a:link,
+a:hover {
+  outline: none;
+}
+body {
+  font-family: Arial;
+  font-size: 16px;
+}
+.margin-30 {
+  margin-bottom: 30px;
+}
+.orange-bg {
+  background: #dd6922;
+}
+.text-center {
+  text-align: center;
+}
+.pink-bg {
+  background: #e65a8b;
+}
+.green-bg {
+  background: #74b743;
+}
+.black-bg {
+  background: #000;
+}
+.brown-bg {
+  background: #563933;
+}
+.coral-bg {
+  background: #f54662;
+}
+.blue {
+  background: #60a9ba;
+}
+.dark-green-bg {
+  background: #19ab93;
+}
+.purple-bg {
+  background: #a55a87;
+}
+.light-orange-bg {
+  background: #dd6922;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

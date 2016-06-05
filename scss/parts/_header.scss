@@ -1,0 +1,166 @@
+.icon-addres {
+  &:before {
+    width: 14px;
+    height: 19px;
+    background-position: 0 0;
+    top: 0;
+    left: 0;
+  }
+}
+.icon-mail {
+  &:before {
+    width: 19px;
+    height: 14px;
+    background-position: 0 -19px;
+    top: 3px;
+    left: 0px;
+  }
+}
+.icon-number {
+  &:before {
+    width: 16px;
+    height: 15px;
+    background-position: 0 -37px;
+    top: 3px;
+    left: 0px;
+  }
+}
+
+header {
+  padding: 40px 30px;
+  .logo {
+    float: left;
+    img {
+      max-width: 100%;
+    }
+  }
+  .contact-wrap {
+    text-align: right;
+    float: right;
+    .contact {
+      li {
+        @include inline-block(middle);
+        font-size: 14px;
+        margin-left: 35px;
+        padding-left: 30px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .head-menu {
+      margin-top: 15px;
+      .trigger {
+        cursor: pointer;
+        text-align: left;
+        color: #fff;
+        display: none;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          width: 20px;
+          height: 20px;
+          background: url(../images/sprite.png) no-repeat;
+          background-position: 0 -78px;
+        }
+      }
+      ul {
+        @include inline-block(middle);
+        li {
+          @include inline-block(top);
+          margin-left: 30px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      button {
+        margin-left: 30px;
+      }
+    }
+  }
+  @include breakpoint((to: 1200px)) {
+    .contact-wrap {
+      .contact {
+        li {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @include breakpoint((to: 992px)) {
+    text-align: center;
+    .logo {
+      float: none;
+      margin-bottom: 10px;
+    }
+    .contact-wrap {
+      float: none;
+      text-align: center;
+    }
+  }
+  @include breakpoint((to: 600px)) {
+    .contact-wrap {
+      .contact {
+        li {
+          padding-left: 0;
+          display: none;
+          &:first-child {
+            display: block;
+          }
+          &:before {
+            display: none;
+          }
+        }
+      }
+      .head-menu {
+        .trigger {
+          display: block;
+          padding: 10px;
+          background: #74b743;
+        }
+        ul {
+          display: none;
+          text-align: left;
+          li {
+            padding: 10px;
+            display: block;
+            margin-left: 0;
+            background: #74b743;
+            color: #fff;
+            &:first-child {
+              border-top: 1px solid #ddd;
+            }
+          }
+        }
+        .button {
+          margin-left: 0;
+          margin-top: 10px;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+button {
+  @include inline-block(middle);
+  background: #ff971e;
+  color: #fff;
+  padding: 10px 15px;
+  transition: .5s;
+  &:hover {
+    background: #e7c706;
+  }
+}
+
+
+
+
+
+
+
+

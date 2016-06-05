@@ -1,0 +1,307 @@
+.product {
+  background: url(../images/tea-bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 30px 50px;
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+  }
+  img {
+    max-width: 100%;
+  }
+  p {
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+    margin: auto;
+    font-style: italic;
+    font-weight: bold;
+    span {
+      color: #f7931f;
+    }
+  }
+  .prod-description {
+    margin-top: 30px;
+    ul {
+      float: left;
+      color: #ff971e;
+      list-style-type: square;
+      list-style-position: inside;
+      li {
+        span {
+          color: #fff;
+        }
+      }
+    }
+    .button {
+      float: right;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+  }
+  @include breakpoint((to: 768px)) {
+    .prod-description {
+      margin-top: 20px;
+      text-align: center;
+      ul {
+        float: none;
+        list-style: none;
+      }
+      .button {
+        float: none;
+        margin-top: 15px;
+      }
+    }
+  }
+  @include breakpoint((to: 600px)) {
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 23px;
+  font-weight: normal;
+  padding: 20px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.title-item {
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 30px;
+}
+
+.item-product {
+  .product-wrap {
+    padding-left: 30px;
+    margin-top: 20px;
+    h5 {
+      color: #333333;
+      font-size: 12px;
+      min-height: 35px;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    ul {
+      min-height: 190px;
+      li {
+        color: #333333;
+        font-size: 12px;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .title-price {
+    font-size: 16px;
+    color: #7c7b7b;
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    padding: 20px 5px;
+    span {
+      font-size: 18px;
+      color: #74b743;
+      margin-left: 10px;
+      @include inline-block(middle);
+    }
+  }
+  @include breakpoint((to: 992px)) {
+    .product-wrap {
+      h5 {
+        min-height: 0;
+      }
+      ul {
+        min-height: 0;
+      }
+    }
+    .title-price {
+      text-align: center;
+    }
+  }
+  @include breakpoint((to: 450px)) {
+    .product-wrap {
+      padding-left: 0;
+    }
+    .title-item {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+}
+
+.product-img-wrap {
+  margin-top: 20px;
+  position: relative;
+  height: 225px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .img-item {
+    float: left;
+    width: 130px;
+    height: 225px;
+  }
+  .img-description {
+    overflow: hidden;
+    p {
+      font-size: 12px;
+      padding-left: 15px;
+    }
+  }
+  .img-bottom {
+    position: absolute;
+    left: 135px;
+    bottom: 0;
+  }
+  @include breakpoint((to: 450px)) {
+    margin-top: 20px;
+    .img-item {
+      display: none;
+    }
+    .img-bottom {
+      width: 100%;
+      position: static;
+    }
+    .img-description {
+      margin-top: 0;
+      p {
+        padding: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.special {
+  .banner {
+    margin-bottom: 40px;
+    padding: 30px 100px;
+    @include table(middle);
+    .box {
+      width: 145px;
+      background: url(../images/box.png) no-repeat center center;
+      background-size: cover;
+      height: 145px;
+    }
+    p {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      span {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @include breakpoint((to: 992px)) {
+    .banner {
+      display: block;
+      .box {
+        display: none;
+      }
+      p {
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint((to: 768px)) {
+    .banner {
+      padding: 20px;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+.icon {
+  position: relative;
+  @include inline-block(middle);
+  cursor: pointer;
+  &:before {
+    background: url(../images/sprite.png) no-repeat;
+    display: block;
+    position: absolute;
+    content: '';
+  }
+}
+.icon-order {
+  padding: 15px 30px 15px 50px;
+  color: #fff;
+  background: #ff971e;
+  &:before {
+    width: 22px;
+    height: 24px;
+    left: 15px;
+    top: 12px;
+    background-position: 0 -54px;
+  }
+}
+.title-middle {
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 20px
+  }
+  img {
+    max-width: 100%;
+  }
+  span {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include inline-block;
+    margin-top: 30px;
+  }
+  @include breakpoint((to: 992px)) {
+    h3 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  @include breakpoint((to: 768px)) {
+    h3 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
